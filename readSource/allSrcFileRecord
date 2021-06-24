@@ -1,0 +1,315 @@
+.
+├── arch
+│   └── amd64
+│       ├── include
+│       │   ├── arch.h
+│       │   ├── arg.h
+│       │   ├── asm.h
+│       │   ├── atomic.h
+│       │   ├── barrier.h
+│       │   ├── bios
+│       │   │   └── bios.h
+│       │   ├── boot
+│       │   │   ├── boot.h
+│       │   │   └── memmap.h
+│       │   ├── byteorder.h
+│       │   ├── context.h
+│       │   ├── context_offset.h
+│       │   ├── cpu.h
+│       │   ├── cpuid.h
+│       │   ├── ddi
+│       │   │   └── ddi.h
+│       │   ├── debugger.h
+│       │   ├── debug.h
+│       │   ├── drivers
+│       │   │   ├── ega.h
+│       │   │   ├── i8042.h
+│       │   │   ├── i8254.h
+│       │   │   ├── i8259.h
+│       │   │   └── vesa.h
+│       │   ├── elf.h
+│       │   ├── faddr.h
+│       │   ├── fpu_context.h
+│       │   ├── interrupt.h
+│       │   ├── memstr.h
+│       │   ├── mm
+│       │   │   ├── as.h
+│       │   │   ├── asid.h
+│       │   │   ├── frame.h
+│       │   │   ├── memory_init.h
+│       │   │   ├── page.h
+│       │   │   ├── ptl.h
+│       │   │   └── tlb.h
+│       │   ├── pm.h
+│       │   ├── proc
+│       │   │   ├── task.h
+│       │   │   └── thread.h
+│       │   ├── smp
+│       │   │   ├── ap.h
+│       │   │   ├── apic.h
+│       │   │   ├── mps.h
+│       │   │   └── smp.h
+│       │   ├── syscall.h
+│       │   └── types.h
+│       └── src
+│           ├── amd64.c
+│           ├── asm_utils.S
+│           ├── bios
+│           │   └── bios.c
+│           ├── boot
+│           │   └── boot.S
+│           ├── context.S
+│           ├── cpu
+│           │   └── cpu.c
+│           ├── ddi
+│           │   └── ddi.c
+│           ├── debugger.c
+│           ├── delay.S
+│           ├── drivers
+│           │   ├── ega.c
+│           │   ├── i8254.c
+│           │   ├── i8259.c
+│           │   └── vesa.c
+│           ├── fpu_context.c
+│           ├── interrupt.c
+│           ├── mm
+│           │   ├── as.c
+│           │   ├── frame.c
+│           │   ├── memory_init.c
+│           │   ├── page.c
+│           │   └── tlb.c
+│           ├── pm.c
+│           ├── proc
+│           │   ├── scheduler.c
+│           │   ├── task.c
+│           │   └── thread.c
+│           ├── smp
+│           │   ├── apic.c
+│           │   ├── ap.S
+│           │   ├── ipi.c
+│           │   ├── mps.c
+│           │   └── smp.c
+│           ├── syscall.c
+│           └── userspace.c
+├── genarch
+│   ├── include
+│   │   ├── acpi
+│   │   │   ├── acpi.h
+│   │   │   └── madt.h
+│   │   ├── fb
+│   │   │   ├── fb.h
+│   │   │   └── font-8x16.h
+│   │   ├── i8042
+│   │   │   └── i8042.h
+│   │   ├── mm
+│   │   │   ├── as_ht.h
+│   │   │   ├── asid_fifo.h
+│   │   │   ├── as_pt.h
+│   │   │   ├── page_ht.h
+│   │   │   └── page_pt.h
+│   │   ├── ofw
+│   │   │   ├── memory_init.h
+│   │   │   └── ofw.h
+│   │   └── softint
+│   │       └── division.h
+│   └── src
+│       ├── acpi
+│       │   ├── acpi.c
+│       │   └── madt.c
+│       ├── fb
+│       │   ├── fb.c
+│       │   ├── font-8x16.c
+│       │   └── helenos.xbm
+│       ├── i8042
+│       │   └── i8042.c
+│       ├── mm
+│       │   ├── as_ht.c
+│       │   ├── asid.c
+│       │   ├── asid_fifo.c
+│       │   ├── as_pt.c
+│       │   ├── page_ht.c
+│       │   └── page_pt.c
+│       ├── ofw
+│       │   ├── memory_init.c
+│       │   └── ofw.c
+│       └── softint
+│           └── division.c
+├── generic
+│   ├── include
+│   │   ├── adt
+│   │   │   ├── bitmap.h
+│   │   │   ├── btree.h
+│   │   │   ├── fifo.h
+│   │   │   ├── hash_table.h
+│   │   │   └── list.h
+│   │   ├── align.h
+│   │   ├── arch -> ../../arch/amd64/include/
+│   │   ├── arch.h
+│   │   ├── atomic.h
+│   │   ├── bitops.h
+│   │   ├── byteorder.h
+│   │   ├── config.h
+│   │   ├── console
+│   │   │   ├── chardev.h
+│   │   │   ├── cmd.h
+│   │   │   ├── console.h
+│   │   │   ├── kconsole.h
+│   │   │   └── klog.h
+│   │   ├── context.h
+│   │   ├── cpu.h
+│   │   ├── ddi
+│   │   │   ├── ddi_arg.h
+│   │   │   └── ddi.h
+│   │   ├── debug.h
+│   │   ├── elf.h
+│   │   ├── errno.h
+│   │   ├── fpu_context.h
+│   │   ├── func.h
+│   │   ├── genarch -> ../../genarch/include/
+│   │   ├── interrupt.h
+│   │   ├── ipc
+│   │   │   ├── ipc.h
+│   │   │   ├── ipcrsc.h
+│   │   │   ├── irq.h
+│   │   │   └── sysipc.h
+│   │   ├── macros.h
+│   │   ├── main
+│   │   │   ├── kinit.h
+│   │   │   ├── uinit.h
+│   │   │   └── version.h
+│   │   ├── memstr.h
+│   │   ├── mm
+│   │   │   ├── as.h
+│   │   │   ├── asid.h
+│   │   │   ├── buddy.h
+│   │   │   ├── frame.h
+│   │   │   ├── page.h
+│   │   │   ├── slab.h
+│   │   │   └── tlb.h
+│   │   ├── panic.h
+│   │   ├── preemption.h
+│   │   ├── printf
+│   │   │   └── printf_core.h
+│   │   ├── print.h
+│   │   ├── proc
+│   │   │   ├── scheduler.h
+│   │   │   ├── task.h
+│   │   │   ├── thread.h
+│   │   │   └── uarg.h
+│   │   ├── putchar.h
+│   │   ├── security
+│   │   │   └── cap.h
+│   │   ├── smp
+│   │   │   ├── ipi.h
+│   │   │   └── smp.h
+│   │   ├── sort.h
+│   │   ├── stackarg.h
+│   │   ├── stdarg.h
+│   │   ├── symtab.h
+│   │   ├── synch
+│   │   │   ├── condvar.h
+│   │   │   ├── futex.h
+│   │   │   ├── mutex.h
+│   │   │   ├── rwlock.h
+│   │   │   ├── semaphore.h
+│   │   │   ├── spinlock.h
+│   │   │   ├── synch.h
+│   │   │   └── waitq.h
+│   │   ├── syscall
+│   │   │   ├── copy.h
+│   │   │   ├── sysarg64.h
+│   │   │   └── syscall.h
+│   │   ├── sysinfo
+│   │   │   └── sysinfo.h
+│   │   ├── test.h
+│   │   ├── time
+│   │   │   ├── clock.h
+│   │   │   ├── delay.h
+│   │   │   └── timeout.h
+│   │   ├── typedefs.h
+│   │   └── userspace.h
+│   └── src
+│       ├── adt
+│       │   ├── bitmap.c
+│       │   ├── btree.c
+│       │   ├── hash_table.c
+│       │   └── list.c
+│       ├── console
+│       │   ├── chardev.c
+│       │   ├── cmd.c
+│       │   ├── console.c
+│       │   ├── kconsole.c
+│       │   └── klog.c
+│       ├── cpu
+│       │   └── cpu.c
+│       ├── ddi
+│       │   └── ddi.c
+│       ├── debug
+│       │   └── symtab.c
+│       ├── interrupt
+│       │   └── interrupt.c
+│       ├── ipc
+│       │   ├── ipc.c
+│       │   ├── ipcrsc.c
+│       │   ├── irq.c
+│       │   └── sysipc.c
+│       ├── lib
+│       │   ├── elf.c
+│       │   ├── func.c
+│       │   ├── memstr.c
+│       │   └── sort.c
+│       ├── main
+│       │   ├── kinit.c
+│       │   ├── main.c
+│       │   ├── uinit.c
+│       │   └── version.c
+│       ├── mm
+│       │   ├── as.c
+│       │   ├── backend_anon.c
+│       │   ├── backend_elf.c
+│       │   ├── backend_phys.c
+│       │   ├── buddy.c
+│       │   ├── frame.c
+│       │   ├── page.c
+│       │   ├── slab.c
+│       │   └── tlb.c
+│       ├── preempt
+│       │   └── preemption.c
+│       ├── printf
+│       │   ├── printf.c
+│       │   ├── printf_core.c
+│       │   ├── snprintf.c
+│       │   ├── sprintf.c
+│       │   ├── vprintf.c
+│       │   ├── vsnprintf.c
+│       │   └── vsprintf.c
+│       ├── proc
+│       │   ├── scheduler.c
+│       │   ├── task.c
+│       │   ├── the.c
+│       │   └── thread.c
+│       ├── security
+│       │   └── cap.c
+│       ├── smp
+│       │   └── ipi.c
+│       ├── synch
+│       │   ├── condvar.c
+│       │   ├── futex.c
+│       │   ├── mutex.c
+│       │   ├── rwlock.c
+│       │   ├── semaphore.c
+│       │   ├── spinlock.c
+│       │   └── waitq.c
+│       ├── syscall
+│       │   ├── copy.c
+│       │   └── syscall.c
+│       ├── sysinfo
+│       │   └── sysinfo.c
+│       └── time
+│           ├── clock.c
+│           ├── delay.c
+│           └── timeout.c
+└── readSource
+    └── allSrcFileRecord
+
+73 directories, 239 files
